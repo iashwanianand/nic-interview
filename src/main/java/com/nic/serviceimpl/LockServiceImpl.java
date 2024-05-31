@@ -108,7 +108,6 @@ public class LockServiceImpl implements LockService {
 			Field field = entityClass.getDeclaredField(constant);
 			field.setAccessible(true);
 			field.set(entity, value);
-
 		}
 	}
 

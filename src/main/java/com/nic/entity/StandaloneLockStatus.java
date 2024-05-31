@@ -1,5 +1,7 @@
 package com.nic.entity;
 
+import java.io.Serializable;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -15,7 +17,9 @@ import lombok.Setter;
 @RequiredArgsConstructor
 @Entity
 @Table(name = "standalone_lock_status")
-public class StandaloneLockStatus {
+public class StandaloneLockStatus implements Serializable {
+
+	private static final long serialVersionUID = -7222477494103352838L;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
